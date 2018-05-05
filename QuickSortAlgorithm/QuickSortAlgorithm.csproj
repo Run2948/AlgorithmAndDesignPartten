@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D5B5B7EA-7035-4FC5-BF9F-B2D551F51BC1}</ProjectGuid>
+    <ProjectGuid>{2AA42037-ABFF-4615-AEB2-CFB6E5EACDC5}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CSharpAlgorithm</RootNamespace>
-    <AssemblyName>CSharpAlgorithm</AssemblyName>
+    <RootNamespace>QuickSortAlgorithm</RootNamespace>
+    <AssemblyName>QuickSortAlgorithm</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
