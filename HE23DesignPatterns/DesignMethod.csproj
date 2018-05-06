@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EADD02C1-97D4-469F-8C33-B52F289CB603}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DesignMethod</RootNamespace>
+    <AssemblyName>DesignMethod</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OpenDesign.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartDesign.cs" />
+    <Compile Include="中介者模式\Client.cs" />
+    <Compile Include="中介者模式\Program.cs" />
+    <Compile Include="享元模式\Client.cs" />
+    <Compile Include="享元模式\Program.cs" />
+    <Compile Include="代理模式\Client.cs" />
+    <Compile Include="代理模式\Program.cs" />
+    <Compile Include="单例模式\Program.cs" />
+    <Compile Include="单例模式\Singleton.cs" />
+    <Compile Include="原型模式\Client.cs" />
+    <Compile Include="原型模式\Program.cs" />
+    <Compile Include="命令模式\Client.cs" />
+    <Compile Include="命令模式\Program.cs" />
+    <Compile Include="备忘录模式\Client.cs" />
+    <Compile Include="备忘录模式\Program.cs" />
+    <Compile Include="外观模式\Client.cs" />
+    <Compile Include="外观模式\Program.cs" />
+    <Compile Include="工厂方法\Food.cs" />
+    <Compile Include="工厂方法\Program.cs" />
+    <Compile Include="建造者\Customer.cs" />
+    <Compile Include="建造者\Program.cs" />
+    <Compile Include="抽象工厂\Client.cs" />
+    <Compile Include="抽象工厂\Program.cs" />
+    <Compile Include="桥接模式\Cilent.cs" />
+    <Compile Include="桥接模式\Program.cs" />
+    <Compile Include="模板模式\Client.cs" />
+    <Compile Include="模板模式\Program.cs" />
+    <Compile Include="状态模式\Client.cs" />
+    <Compile Include="状态模式\Program.cs" />
+    <Compile Include="策略者模式\Client.cs" />
+    <Compile Include="策略者模式\Program.cs" />
+    <Compile Include="简单工厂\Client.cs" />
+    <Compile Include="简单工厂\Program.cs" />
+    <Compile Include="组合模式\Client.cs" />
+    <Compile Include="组合模式\Client2.cs" />
+    <Compile Include="组合模式\Program.cs" />
+    <Compile Include="装饰者模式\Client.cs" />
+    <Compile Include="装饰者模式\Program.cs" />
+    <Compile Include="观察者模式\Client.cs" />
+    <Compile Include="观察者模式\Program.cs" />
+    <Compile Include="解释者模式\Client.cs" />
+    <Compile Include="解释者模式\Program.cs" />
+    <Compile Include="访问者模式\Client.cs" />
+    <Compile Include="访问者模式\Program.cs" />
+    <Compile Include="责任链模式\Client.cs" />
+    <Compile Include="责任链模式\Program.cs" />
+    <Compile Include="迭代器模式\Client.cs" />
+    <Compile Include="迭代器模式\Program.cs" />
+    <Compile Include="适配器\CilentClass.cs" />
+    <Compile Include="适配器\CilentObject.cs" />
+    <Compile Include="适配器\Program.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="设计摘要\创建性模式.html" />
+    <Content Include="设计摘要\结构型模式.html" />
+    <Content Include="设计摘要\行为型模式.html" />
+    <Content Include="设计摘要\设计原则.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

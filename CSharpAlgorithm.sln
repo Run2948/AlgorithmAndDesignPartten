@@ -5,6 +5,20 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickSortAlgorithm", "QuickSortAlgorithm\QuickSortAlgorithm.csproj", "{2AA42037-ABFF-4615-AEB2-CFB6E5EACDC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpAlgorithm", "CSharpAlgorithm\CSharpAlgorithm.csproj", "{4FB9F31C-DEC0-4F45-8845-385DFC813A24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AA05A379-51BF-49DD-9750-330BBFFEF15E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{24E8BB80-23E4-4DFE-B9CC-EA992C306382}"
+	ProjectSection(SolutionItems) = preProject
+		基于C#的23种设计模式.pdf = 基于C#的23种设计模式.pdf
+		数据结构与算法：C#语言描述(中文).pdf = 数据结构与算法：C#语言描述(中文).pdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{96281E3C-7198-46CA-8ACF-6D03FC3A0872}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignMethod", "HE23DesignPatterns\DesignMethod.csproj", "{EADD02C1-97D4-469F-8C33-B52F289CB603}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +29,21 @@ Global
 		{2AA42037-ABFF-4615-AEB2-CFB6E5EACDC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AA42037-ABFF-4615-AEB2-CFB6E5EACDC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AA42037-ABFF-4615-AEB2-CFB6E5EACDC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FB9F31C-DEC0-4F45-8845-385DFC813A24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FB9F31C-DEC0-4F45-8845-385DFC813A24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FB9F31C-DEC0-4F45-8845-385DFC813A24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FB9F31C-DEC0-4F45-8845-385DFC813A24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EADD02C1-97D4-469F-8C33-B52F289CB603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EADD02C1-97D4-469F-8C33-B52F289CB603}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EADD02C1-97D4-469F-8C33-B52F289CB603}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EADD02C1-97D4-469F-8C33-B52F289CB603}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2AA42037-ABFF-4615-AEB2-CFB6E5EACDC5} = {96281E3C-7198-46CA-8ACF-6D03FC3A0872}
+		{4FB9F31C-DEC0-4F45-8845-385DFC813A24} = {AA05A379-51BF-49DD-9750-330BBFFEF15E}
+		{EADD02C1-97D4-469F-8C33-B52F289CB603} = {AA05A379-51BF-49DD-9750-330BBFFEF15E}
 	EndGlobalSection
 EndGlobal
