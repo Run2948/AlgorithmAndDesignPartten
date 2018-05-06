@@ -401,5 +401,47 @@ namespace CSharpAlgorithm
             }
             return sb.ToString().TrimEnd(',');
         }
+
+
+        static void Test(string[] args)
+        {
+            #region 双链表
+            Console.WriteLine("-------------------------------------");
+            Console.WriteLine("双链表测试开始...");
+            DbLinkList<string> dblink = new DbLinkList<string>();
+            dblink.Head = new DbNode<string>("x");
+            dblink.InsertBefore("w", 0);
+            dblink.InsertBefore("v", 0);
+            dblink.Append("y");
+            dblink.InsertBefore("z", dblink.Count());
+            Console.WriteLine(dblink.Count());//5
+            Console.WriteLine(dblink.ToString());//v,w,x,y,z
+            Console.WriteLine(dblink[1]);//w
+            Console.WriteLine(dblink[0]);//v
+            Console.WriteLine(dblink[4]);//z
+            Console.WriteLine(dblink.IndexOf("z"));//4
+            Console.WriteLine(dblink.RemoveAt(2));//x
+            Console.WriteLine(dblink.ToString());//v,w,y,z
+            dblink.InsertBefore("x", 2);
+            Console.WriteLine(dblink.ToString());//v,w,x,y,z
+            Console.WriteLine(dblink.GetItemAt(2));//x
+            dblink.Reverse();
+            Console.WriteLine(dblink.ToString());//z,y,x,w,v
+            dblink.InsertAfter("1", 0);
+            dblink.InsertAfter("2", 1);
+            dblink.InsertAfter("6", 5);
+            dblink.InsertAfter("8", 7);
+            dblink.InsertAfter("A", 10);//Position is error!
+            Console.WriteLine(dblink.ToString()); //z,1,2,y,x,w,6,v,8  
+
+            string _tail = dblink.GetItemAt(dblink.Count() - 1);
+            Console.WriteLine(_tail);
+
+            Console.WriteLine(dblink.TestPrevErgodic());//8
+            Console.ReadKey(); //8,v,6,w,x,y,2,1,z
+            #endregion
+
+
+        }
     }
 }

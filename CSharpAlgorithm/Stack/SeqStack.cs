@@ -113,5 +113,24 @@ namespace CSharpAlgorithm
             return sb.ToString().Trim(',');
         }
 
+
+        static void Test(string[] args)
+        {
+            #region 顺序堆栈
+            Console.WriteLine("顺序堆栈测试开始...");
+            SeqStack<int> seqStack = new SeqStack<int>(10);
+            seqStack.Push(1);
+            seqStack.Push(2);
+            seqStack.Push(3);
+
+            Console.WriteLine(seqStack);
+            Console.WriteLine(seqStack.Peek());
+            Console.WriteLine(seqStack);
+            Console.WriteLine(seqStack.Pop());
+            Console.WriteLine(seqStack);
+
+            #endregion
+        }
+
     }
 }

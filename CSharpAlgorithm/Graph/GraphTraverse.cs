@@ -23,6 +23,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+/**
+ * 数据结构图的遍历算法C#实现 https://mp.weixin.qq.com/s/msr5NS3XWW0ZjOGMtc5BBQ
+ */
 namespace CSharpAlgorithm
 {
     /// <summary>

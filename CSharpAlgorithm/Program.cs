@@ -148,7 +148,7 @@ namespace CSharpAlgorithm
             Console.WriteLine(link.ToString()); //z,1,2,y,x,w,6,v,8
             #endregion
 
-            #region 队列
+            #region 循环队列
             CSeqQueue<int> queue = new CSeqQueue<int>(5);
             queue.Enqueue(1);
             queue.Enqueue(2);
@@ -208,6 +208,20 @@ namespace CSharpAlgorithm
             Console.ReadLine();
             #endregion
 
+            #region 链式队列
+
+            LinkQueue<int> Lqueue = new LinkQueue<int>();
+            Lqueue.Enqueue(1);
+            Lqueue.Enqueue(2);
+            Lqueue.Enqueue(3);
+            Lqueue.Enqueue(4);
+            Console.WriteLine(Lqueue);
+            Lqueue.Dequeue();
+            Console.WriteLine(Lqueue);
+            Console.WriteLine(Lqueue.Count());
+
+            #endregion
+
             #region 双链表
             Console.WriteLine("-------------------------------------");
             Console.WriteLine("双链表测试开始...");
@@ -252,6 +266,37 @@ namespace CSharpAlgorithm
             Console.WriteLine(huffTree.ToString()); 
             // 输出结果也许并不直观，对照下面这张图就明白了：
                 // https://pic002.cnblogs.com/images/2010/27612/2010120513101331.png
+            Console.ReadLine();
+            #endregion
+
+            #region 顺序堆栈
+            Console.WriteLine("顺序堆栈测试开始...");
+            SeqStack<int> seqStack = new SeqStack<int>(10);
+            seqStack.Push(1);
+            seqStack.Push(2);
+            seqStack.Push(3);
+
+            Console.WriteLine(seqStack);
+            Console.WriteLine(seqStack.Peek());
+            Console.WriteLine(seqStack);
+            Console.WriteLine(seqStack.Pop());
+            Console.WriteLine(seqStack);
+
+            #endregion
+
+            #region 链堆栈
+            Console.WriteLine("链堆栈测试开始...");
+            LinkStack<int> linkStack = new LinkStack<int>();
+            linkStack.Push(1);
+            linkStack.Push(2);
+            linkStack.Push(3);
+
+            Console.WriteLine(linkStack);
+            Console.WriteLine(linkStack.Peek());
+            Console.WriteLine(linkStack);
+            Console.WriteLine(linkStack.Pop());
+            Console.WriteLine(linkStack);
+
             Console.ReadLine();
             #endregion
 

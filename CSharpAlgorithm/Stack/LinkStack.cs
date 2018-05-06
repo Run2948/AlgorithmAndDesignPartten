@@ -131,5 +131,26 @@ namespace CSharpAlgorithm
 
             return sb.ToString();
         }
+
+
+
+        static void Test(string[] args)
+        {
+            #region 链堆栈
+            Console.WriteLine("链堆栈测试开始...");
+            LinkStack<int> linkStack = new LinkStack<int>();
+            linkStack.Push(1);
+            linkStack.Push(2);
+            linkStack.Push(3);
+
+            Console.WriteLine(linkStack);
+            Console.WriteLine(linkStack.Peek());
+            Console.WriteLine(linkStack);
+            Console.WriteLine(linkStack.Pop());
+            Console.WriteLine(linkStack);
+
+            Console.ReadLine();
+            #endregion
+        }
     }
 }

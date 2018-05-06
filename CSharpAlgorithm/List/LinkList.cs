@@ -336,5 +336,41 @@ namespace CSharpAlgorithm
             return sb.ToString().TrimEnd(',');
 
         }
+
+
+        static void Test(string[] args)
+        {
+            #region 单链表
+            Console.WriteLine("-------------------------------------");
+            Console.WriteLine("单链表测试开始...");
+            LinkList<string> link = new LinkList<string>();
+            link.Head = new LinkNode<string>("x");
+            link.InsertBefore("w", 0);
+            link.InsertBefore("v", 0);
+            link.Append("y");
+            link.InsertBefore("z", link.Count());
+            Console.WriteLine(link.Count());//5
+            Console.WriteLine(link.ToString());//v,w,x,y,z
+            Console.WriteLine(link[1]);//w
+            Console.WriteLine(link[0]);//v
+            Console.WriteLine(link[4]);//z
+            Console.WriteLine(link.IndexOf("z"));//4
+            Console.WriteLine(link.RemoveAt(2));//x
+            Console.WriteLine(link.ToString());//v,w,y,z
+            link.InsertBefore("x", 2);
+            Console.WriteLine(link.ToString());//v,w,x,y,z
+            Console.WriteLine(link.GetItemAt(2));//x
+            link.Reverse();
+            Console.WriteLine(link.ToString());//z,y,x,w,v
+            link.InsertAfter("1", 0);
+            link.InsertAfter("2", 1);
+            link.InsertAfter("6", 5);
+            link.InsertAfter("8", 7);
+            link.InsertAfter("A", 10);//Position is error!
+
+            Console.WriteLine(link.ToString()); //z,1,2,y,x,w,6,v,8
+            #endregion
+
+        }
     }
 }

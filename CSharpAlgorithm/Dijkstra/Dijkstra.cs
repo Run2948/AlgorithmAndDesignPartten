@@ -26,7 +26,7 @@ using System.Threading.Tasks;
 namespace CSharpAlgorithm
 {
     /// <summary>
-    /// Dijkstra(迪杰斯特拉)最短路径算法
+    /// Dijkstra(迪杰斯特拉)最短路径算法  https://mp.weixin.qq.com/s/wqwZf6wa52NGAHfSfQkZwA
     /// </summary>
     public class Dijkstra
     {

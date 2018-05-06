@@ -182,5 +182,154 @@ namespace CSharpAlgorithm
                 return false;
             }
         }
+
+
+
+        static void Test(string[] args)
+        {
+            #region 二叉树
+            BiTree<string> tree = new BiTree<string>("A");
+            Node<string> root = tree.Root;
+            tree.InsertL("B", root);
+            tree.InsertR("C", root);
+
+            Node<string> b = root.LChild;
+            Node<string> c = root.RChild;
+
+            tree.InsertL("D", b);
+            tree.InsertR("E", b);
+
+            tree.InsertL("F", c);
+            tree.InsertR("G", c);
+
+            Node<string> d = b.LChild;
+            Node<string> e = b.RChild;
+
+            tree.InsertL("H", d);
+            tree.InsertR("I", d);
+            tree.InsertL("J", e);
+
+            Console.WriteLine("前序遍历开始>>>\n");
+            //前序遍历
+            PreOrder(root);
+
+            Console.WriteLine("\n------------------------\n");
+
+
+            Console.WriteLine("中序遍历开始>>>\n");
+            //中序遍历
+            InOrder(root);
+
+            Console.WriteLine("\n------------------------\n");
+            Console.WriteLine("后序遍历开始>>>\n");
+            //后序遍历
+            PostOrder(root);
+
+
+            Console.WriteLine("\n------------------------\n");
+            Console.WriteLine("层序遍历开始>>>\n");
+            //后序遍历
+            LevelOrder(root);
+
+            Console.Read();
+
+            #endregion
+        }
+
+
+        #region 二叉树的前序、中序、后序遍历
+        /// <summary>
+        /// 前序遍历(即 root-->left-->right )
+        /// </summary>
+        /// <param name="root"></param>
+        static void PreOrder(Node<string> root)
+        {
+            if (root != null)
+            {
+                //先处理root
+                Console.Write("{0} ", root.Data);
+
+                //再处理root的左子节点
+                PreOrder(root.LChild);
+
+                //再处理root的右子节点
+                PreOrder(root.RChild);
+            }
+
+
+        }
+
+        /// <summary>
+        /// 中序遍历(left-->root-->right)
+        /// </summary>
+        /// <param name="root"></param>
+        static void InOrder(Node<string> root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+
+            //先左子节点
+            InOrder(root.LChild);
+
+            //再根节点
+            Console.Write("{0} ", root.Data);
+
+            //再右子节点
+            InOrder(root.RChild);
+        }
+
+        /// <summary>
+        /// 后序遍历
+        /// </summary>
+        /// <param name="root"></param>
+        static void PostOrder(Node<string> root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+
+            PostOrder(root.LChild);
+            PostOrder(root.RChild);
+            Console.Write("{0} ", root.Data);
+        }
+
+        /// <summary>
+        /// 层顺遍历
+        /// </summary>
+        /// <param name="root"></param>
+        static void LevelOrder(Node<string> root)
+        {
+            if (root != null)
+            {
+                Queue<Node<string>> q = new Queue<Node<string>>();
+
+                q.Enqueue(root);
+
+                while (q.Count > 0)
+                {
+                    Node<string> tmp = q.Dequeue();
+
+                    //先处理根节点
+                    Console.Write("{0} ", tmp.Data);
+
+                    if (tmp.LChild != null)
+                    {
+                        //左子节点入队
+                        q.Enqueue(tmp.LChild);
+                    }
+
+                    if (tmp.RChild != null)
+                    {
+                        //右子节点入队
+                        q.Enqueue(tmp.RChild);
+                    }
+                }
+            }
+        }
+        #endregion
+
     }
 }

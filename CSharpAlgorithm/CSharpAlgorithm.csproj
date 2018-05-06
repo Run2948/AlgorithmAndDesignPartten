@@ -46,6 +46,7 @@
     <Compile Include="Graph\GraphTraverse.cs" />
     <Compile Include="Huffman\HuffmanTree.cs" />
     <Compile Include="Huffman\HuffNode.cs" />
+    <Compile Include="Sort\QuickSort.cs" />
     <Compile Include="Sort\Sort.cs" />
     <Compile Include="Tree\BiTree.cs" />
     <Compile Include="Queue\LinkQueue.cs" />

@@ -287,5 +287,39 @@ namespace CSharpAlgorithm
             }
             return sb.ToString().TrimEnd('，');
         }
+
+
+        static void Test(string[] args)
+        {
+            #region 顺序表
+            Console.WriteLine("顺序表测试开始...");
+            SeqList<string> seq = new SeqList<string>(10);
+
+            seq.Append("x");
+            seq.InsertBefore("w", 0);
+            seq.InsertBefore("v", 0);
+            seq.Append("y");
+            seq.InsertBefore("z", seq.Count());
+            Console.WriteLine(seq.Count());//5
+            Console.WriteLine(seq.ToString());//v,w,x,y,z
+            Console.WriteLine(seq[1]);//w
+            Console.WriteLine(seq[0]);//v
+            Console.WriteLine(seq[4]);//z
+            Console.WriteLine(seq.IndexOf("z"));//4
+            Console.WriteLine(seq.RemoveAt(2));//x
+            Console.WriteLine(seq.ToString());//v,w,y,z
+            seq.InsertBefore("x", 2);
+            Console.WriteLine(seq.ToString());//v,w,x,y,z
+            Console.WriteLine(seq.GetItemAt(2));//x
+            seq.Reverse();
+            Console.WriteLine(seq.ToString());//z,y,x,w,v
+
+            seq.InsertAfter("z_1", 0);
+            seq.InsertAfter("y_1", 2);
+            seq.InsertAfter("v_1", seq.Count() - 1);
+            Console.WriteLine(seq.ToString());//z，z_1，y，y_1，x，w，v，v_1
+            #endregion
+        }
+
     }
 }

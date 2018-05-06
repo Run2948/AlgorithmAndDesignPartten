@@ -173,5 +173,43 @@ namespace CSharpAlgorithm
             GetCombination(ref list, t, t.Length, n, temp, n);
             return list;
         }
+
+
+        static void TestPermutation(string[] args)
+        {
+            #region 排列
+            // 求排列：5个数取3个的任意排列
+            int[] IntArr = new int[] { 1, 2, 3, 4, 5 }; //整型数组
+            List<int[]> ListCombination = PermutationAndCombination<int>.GetPermutation(IntArr, 3); //求全部的5取3排列
+            foreach (int[] arr in ListCombination)
+            {
+                foreach (int item in arr)
+                {
+                    Console.Write(item + " ");
+                }
+                Console.WriteLine("");
+            }
+            #endregion
+
+        }
+
+        static void TestCombination(string[] args)
+        {
+            #region 组合
+            // 求组合：求5个数里任意3个数的组合
+            int[] IntArr = new int[] { 1, 2, 3, 4, 5 }; //整型数组
+            List<int[]> ListCombination = PermutationAndCombination<int>.GetCombination(IntArr, 3); //求全部的3-3组合
+            foreach (int[] arr in ListCombination)
+            {
+                foreach (int item in arr)
+                {
+                    Console.Write(item + " ");
+                }
+                Console.WriteLine("");
+            }
+            Console.ReadKey();
+            #endregion
+        }
+
     }
 }

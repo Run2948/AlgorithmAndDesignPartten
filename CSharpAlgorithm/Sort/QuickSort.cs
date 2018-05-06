@@ -1,14 +1,31 @@
-﻿using System;
+﻿/* ==============================================================================
+* 命名空间：CSharpAlgorithm.Sort
+* 类 名 称：QuickSort
+* 创 建 者：Qing
+* 创建时间：2018-05-06 18:30:12
+* CLR 版本：4.0.30319.42000
+* 保存的文件名：QuickSort
+* 文件版本：V1.0.0.0
+*
+* 功能描述：N/A 
+*
+* 修改历史：
+*
+*
+* ==============================================================================
+*         CopyRight @ 班纳工作室 2018. All rights reserved
+* ==============================================================================*/
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuickSortAlgorithm
+namespace CSharpAlgorithm
 {
-    class Program
-    {
-        /* 今天介绍快速排序，这也是在实际中最常用的一种排序算法，速度快，效率高。就像名字一样，快速排序是最优秀的一种排序算法。
+    /* 今天介绍快速排序，这也是在实际中最常用的一种排序算法，速度快，效率高。就像名字一样，快速排序是最优秀的一种排序算法。
          * *********************************************************************************************************************************************************************************
          * 
          * 思想
@@ -29,8 +46,10 @@ namespace QuickSortAlgorithm
          * 
          * 之后，在把2左边的元素进行快排，由于只有一个元素，因此快排结束。右边进行快排，递归进行，最终生成最后的结果。
         ***********************************************************************************************************************************************************************************/
+    public class QuickSortAlgorithm
+    {
 
-        static void Main(string[] args)
+        static void Test(string[] args)
         {
             int[] arr = { 5, 1, 3, 99, -5, 4, 2, 7, 9, 100 };
             QuickSort(arr, 0, arr.Length - 1);
@@ -39,7 +58,6 @@ namespace QuickSortAlgorithm
                 Console.Write(item + " ");
             }
         }
-
 
         private static int FindPos(int[] arr, int low, int hi)
         {
@@ -72,6 +90,5 @@ namespace QuickSortAlgorithm
                 QuickSort(arr, pos + 1, hi);
             }
         }
-
     }
 }

@@ -107,5 +107,21 @@ namespace CSharpAlgorithm
 
             return sb.ToString();
         }
+
+
+        static void Test(string[] args)
+        {
+            #region 哈夫曼
+            HuffmanTree huffTree = new HuffmanTree(2, 1, 4, 3);
+            huffTree.Create();
+
+            Console.WriteLine("最终树的节点值如下：");
+            Console.WriteLine(huffTree.ToString()); 
+            // 输出结果也许并不直观，对照下面这张图就明白了：
+            // https://pic002.cnblogs.com/images/2010/27612/2010120513101331.png
+            Console.ReadLine();
+            #endregion
+
+        }
     }
 }

@@ -138,5 +138,25 @@ namespace CSharpAlgorithm
 
             return sb.ToString().Trim(',');
         }
+
+
+
+        static void Test(string[] args)
+        {
+            #region 链式队列
+
+            LinkQueue<int> Lqueue = new LinkQueue<int>();
+            Lqueue.Enqueue(1);
+            Lqueue.Enqueue(2);
+            Lqueue.Enqueue(3);
+            Lqueue.Enqueue(4);
+            Console.WriteLine(Lqueue);
+            Lqueue.Dequeue();
+            Console.WriteLine(Lqueue);
+            Console.WriteLine(Lqueue.Count());
+
+            #endregion
+        }
+
     }
 }
